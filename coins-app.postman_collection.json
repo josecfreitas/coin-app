@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "4755389a-33f2-4117-87fc-38a5c0327bb0",
+		"name": "coins-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "coins",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/coins",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"coins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pools",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base-url}}/coins/:coin/pools",
+							"host": [
+								"{{base-url}}"
+							],
+							"path": [
+								"coins",
+								":coin",
+								"pools"
+							],
+							"variable": [
+								{
+									"key": "coin",
+									"value": "AE"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "minerstat-api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.minerstat.com/v2/coins?list=BTC,BCH,BSV",
+					"protocol": "https",
+					"host": [
+						"api",
+						"minerstat",
+						"com"
+					],
+					"path": [
+						"v2",
+						"coins"
+					],
+					"query": [
+						{
+							"key": "list",
+							"value": "BTC,BCH,BSV"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "hello-world",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base-url}}",
+					"host": [
+						"{{base-url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
