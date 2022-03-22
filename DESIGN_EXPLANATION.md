@@ -12,6 +12,20 @@ npm i
 npm run start:dev
 ```
 
+## How to run tests
+
+To run the unit tests, run the following command:
+
+```bash
+npm test
+```
+
+To run the e2e tests, run the following command:
+
+```bash
+npm run test:e2e
+```
+
 ## Design Decisions and Thoughts
 
 

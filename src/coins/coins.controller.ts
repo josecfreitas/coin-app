@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
 import { CoinsService } from './coins.service';
 
 @Controller('coins')
@@ -11,7 +11,11 @@ export class CoinsController {
   }
 
   @Get(':coin/pools')
-  public async bestPools(@Param('coin') coin: string) {
-    return this.coinsService.getBestPools(coin);
+  public async get10BestPools(@Param('coin') coin: string) {
+    const bestPools = await this.coinsService.getBestPools(coin);
+    if (!bestPools.length) {
+      throw new NotFoundException(`Coin ${coin} doesn't have any pool`);
+    }
+    return bestPools.splice(0, 10);
   }
 }

@@ -5,12 +5,7 @@ import { CoinsModule } from './coins/coins.module';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [
-    CoinsModule,
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
-  ],
+  imports: [CoinsModule, ConfigModule.forRoot()],
   controllers: [AppController],
   providers: [AppService],
 })
