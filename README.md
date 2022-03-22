@@ -1,73 +1,53 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
-</p>
+# Introduction
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+Hello 👋,
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Thanks for taking the time to complete this brief take-home assignment. Please timebox your effort to a maximum of 3 hours.
 
-## Description
+The goal of this exercise is to evaluate your backend skills in developing lean microservices in JavaScript (Node.js, ExpressJS, 3rd-party integration, and testing). Feel free to make any assumptions, simplifications, or other changes to the problems - though please state those in your write up when you submit this assignment. Please use as many libraries as is reasonable - there is no sense in rebuilding what has been built. Feel at liberty to structure the microservice in a way that satisfies you.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Using and Express.js you will create a REST endpoint to retrieve a list Bitcoin mining pools that give the best rewards per coin from Minerstats API (see below). Your consumers need to know the available coins and then search by the available coin to get the top 10 mining pools with the best rewards for a given coin.
 
-## Installation
+Before getting started, please read this document carefully.
 
-```bash
-$ npm install
-```
+**Good luck 🙃**
 
-## Running the app
+# Acceptance Criteria
 
-```bash
-# development
-$ npm run start
+- API must allow two things and must return JSON:
 
-# watch mode
-$ npm run start:dev
+  1. Allow users to pull back all coins available as demonimation for reward, and
+  2. Allow users to search for mining pools with best rewards for a given coin
 
-# production mode
-$ npm run start:prod
-```
+- All crypto ExpressJS endpoints must be behind HTTP Bearer Authentication. Use the following credentials, hardcoding them on the backend: `user@rackspace.com`/`f2b0156f-cf95-4e29-9f57-51296a481c6a`
+- Code must be tested using the framework of your choice
+- Document design decisions
 
-## Test
+# What counts?
 
-```bash
-# unit tests
-$ npm run test
+- All functional requirements must be satisfied
+- Production-like code that must be well coded, clean, and commented
+- Tests must be passing and meaningful
+- General Node.js knowledge
 
-# e2e tests
-$ npm run test:e2e
+# Submission
 
-# test coverage
-$ npm run test:cov
-```
+Once you're satisfied with what you've built. Invite *github-user* to your provide repo and email your recruiter to inform the dev team.
 
-## Support
+# Getting started
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+With latest Node LTS installed, run the following commands:
 
-## Stay in touch
+## What will you find inside this boilerplate
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+In this boilerplate, you will find:
+- The main entry file: `index.js`
+- A `README.md` file to document your comments and design decisions
+- Inside the `package.json`, we added the following packages:
+    - `express`
 
-## License
+# Minerstats API
 
-Nest is [MIT licensed](LICENSE).
+https://api.minerstat.com/docs-coins
+
+Minerstats is a free API that allows you to search for information on crypto mining pools. The API provides basic information for pools listed on minerstat. The API is open to the public and has no authentication requirements. See documentation for more information.
