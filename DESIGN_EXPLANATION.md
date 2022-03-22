@@ -32,6 +32,8 @@ In the root folder there are two files for testing the API on Postman: `coins-ap
 
 ## Design Decisions and Thoughts
 
+I decided to use [Nest JS](https://docs.nestjs.com/) with Express JS because it has many abstractions and dependency injection out of the box
+
 One cool thing to add would be a cache for the MINERSTAT API, since it won't change for 5 to 10 minutes. It might be interesting to add a cache of 1 minute for example, so we won't either exceed the maximum calls limit or have latency problems of calling their API every single request. I won't add it because of the short time.
 
 The files were separeted in three main types:
